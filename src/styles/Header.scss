@@ -1,0 +1,30 @@
+header {
+  z-index: 10;
+  // backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  a {
+    text-decoration: none;
+    color: #000000;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 5px;
+  }
+  .right {
+    display: flex;
+    gap: 1rem;
+  }
+}

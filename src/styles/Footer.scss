@@ -1,0 +1,56 @@
+footer {
+  //   padding: 2rem;
+  height: 20rem;
+  width: 100%;
+  background: #f7f7f7;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  div {
+    padding: 2rem;
+    .form {
+      height: 2.2rem;
+      padding: 0;
+      display: flex;
+      input {
+        border: #aaaaaa solid 1px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        &::placeholder {
+          padding: 0.4rem;
+        }
+      }
+      button {
+        border-radius: 0 5px 5px 0;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.2rem 1rem;
+        background: rgb(116, 81, 145);
+        color: white;
+        border: none;
+      }
+    }
+    h2,
+    h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 200;
+    }
+    p,
+    a {
+      color: #646464;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+    .links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+}
