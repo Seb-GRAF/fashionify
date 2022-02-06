@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/fashionify/static/css/main.73f606f0.css",
+    "main.js": "/fashionify/static/js/main.5b76d1c6.js",
+    "static/media/woman-coat.jpg": "/fashionify/static/media/woman-coat.1aa4b1bb13bc02a37685.jpg",
+    "static/media/home-main.jpg": "/fashionify/static/media/home-main.ffda68ae61bee1bee0a6.jpg",
+    "static/media/man-leather-jacket.jpg": "/fashionify/static/media/man-leather-jacket.feaedb2ac90839e9db07.jpg",
+    "index.html": "/fashionify/index.html",
+    "main.73f606f0.css.map": "/fashionify/static/css/main.73f606f0.css.map",
+    "main.5b76d1c6.js.map": "/fashionify/static/js/main.5b76d1c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73f606f0.css",
+    "static/js/main.5b76d1c6.js"
+  ]
+}
