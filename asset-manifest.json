@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/fashionify/static/css/main.73f606f0.css",
-    "main.js": "/fashionify/static/js/main.9cbfe24c.js",
+    "main.css": "/fashionify/static/css/main.63729da2.css",
+    "main.js": "/fashionify/static/js/main.d085f441.js",
     "static/media/woman-coat.jpg": "/fashionify/static/media/woman-coat.1aa4b1bb13bc02a37685.jpg",
+    "static/media/ethical.jpg": "/fashionify/static/media/ethical.9475730a0e5c23d836c2.jpg",
+    "static/media/sustainable.jpg": "/fashionify/static/media/sustainable.a8db76e192fc69d53371.jpg",
     "static/media/home-main.jpg": "/fashionify/static/media/home-main.ffda68ae61bee1bee0a6.jpg",
     "static/media/man-leather-jacket.jpg": "/fashionify/static/media/man-leather-jacket.feaedb2ac90839e9db07.jpg",
+    "static/media/about-main.jpg": "/fashionify/static/media/about-main.0345bec6981467026647.jpg",
+    "static/media/fashionable.jpg": "/fashionify/static/media/fashionable.08f14aedec5827e864f9.jpg",
     "index.html": "/fashionify/index.html",
-    "main.73f606f0.css.map": "/fashionify/static/css/main.73f606f0.css.map",
-    "main.9cbfe24c.js.map": "/fashionify/static/js/main.9cbfe24c.js.map"
+    "main.63729da2.css.map": "/fashionify/static/css/main.63729da2.css.map",
+    "main.d085f441.js.map": "/fashionify/static/js/main.d085f441.js.map"
   },
   "entrypoints": [
-    "static/css/main.73f606f0.css",
-    "static/js/main.9cbfe24c.js"
+    "static/css/main.63729da2.css",
+    "static/js/main.d085f441.js"
   ]
 }
