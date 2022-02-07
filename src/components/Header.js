@@ -1,21 +1,22 @@
 import React from "react";
 import "../styles/Header.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
       <div className="left">
-        <a href="#/">
+        <Link to="/">
           <h1>Fashionify</h1>
-        </a>
+        </Link>
       </div>
       <div className="right">
-        <a className="shop" href="/shop">
+        <Link className="shop" to="/shop">
           Shop
-        </a>
-        <a className="about" href="/about">
+        </Link>
+        <Link className="about" to="/about">
           About
-        </a>
+        </Link>
       </div>
     </header>
   );
