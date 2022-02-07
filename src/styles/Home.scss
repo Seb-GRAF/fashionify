@@ -5,30 +5,28 @@
   width: 100%;
   .top-section {
     position: relative;
-    background-image: url("../assets/home-main.jpg");
     height: 40rem;
     max-width: 100%;
     padding-right: 5rem;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     color: white;
     transition: 1000ms;
+    overflow: hidden;
     &::after {
-      position: absolute;
       content: "";
-      background: linear-gradient(90deg, #00000034 0%, #0000008e 100%);
+      position: absolute;
       top: 0;
-      right: 0;
-      width: 100%;
+      left: 0;
       height: 100%;
+      width: 100%;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(90deg, #ffffff00 0%, #00000067 100%);
     }
-    &:hover {
-      background-size: 105%;
+    &:hover > img {
+      transform: scale(1);
     }
     .cta {
       display: flex;
@@ -38,9 +36,11 @@
       max-width: 35rem;
       h1,
       h3,
-      a {
+      a,
+      .shop-button {
         font-weight: 400;
         margin: 0;
+        text-decoration: none;
       }
       h1 {
         font-size: 3.5rem;
@@ -51,9 +51,8 @@
         font-weight: 300;
         text-shadow: black 0 0 10px;
       }
-      a {
+      .shop-button {
         width: fit-content;
-        text-decoration: none;
         color: black;
         position: relative;
         background: rgb(255, 255, 255);
@@ -81,12 +80,22 @@
         }
       }
     }
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: scale(1.05);
+      transition: transform 1000ms;
+    }
   }
   .featured {
     height: 40rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 2rem;
     gap: 2rem;
@@ -102,15 +111,14 @@
       align-items: center;
       gap: 1rem;
       .card {
-        position: relative;
+        // position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        flex: 1 1 auto;
+        flex: 0 0 auto;
         height: 22rem;
-        min-width: 8rem;
-        max-width: 15rem;
+        width: 15rem;
         background-color: rgb(236, 236, 236);
         transition: 300ms;
         p {
@@ -122,11 +130,26 @@
           transition: 500ms ease-in-out;
           opacity: 0;
         }
-        &:hover {
-          transform: scale(1.08);
-        }
         &:hover > p {
           opacity: 1;
+        }
+        .add-to-cart {
+          width: 100%;
+          background: rgba(0, 0, 0, 0.062);
+          border: none;
+          opacity: 1;
+          color: white;
+          font-size: 1rem;
+          height: 4rem;
+          transition: 300ms ease-in-out;
+          transform: scaleY(0);
+          transform-origin: bottom;
+          &:hover {
+            background: rgba(0, 0, 0, 0.178);
+          }
+        }
+        &:hover > .add-to-cart {
+          transform: scaleY(1);
         }
       }
     }
@@ -135,6 +158,16 @@
     width: 100%;
     height: 50rem;
     background: #f7f7f7;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      transition: transform 1000ms;
+      &:hover {
+        transform: scale(1);
+      }
+    }
     .top {
       width: 100%;
       height: 50%;
@@ -144,14 +177,7 @@
       .left {
         width: 50%;
         height: 100%;
-        background-image: url("../assets/man-leather-jacket.jpg");
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: 1000ms;
-        &:hover {
-          background-size: 105%;
-        }
+        overflow: hidden;
       }
       .right {
         padding: 2rem;
@@ -180,16 +206,9 @@
       justify-content: space-between;
       align-items: center;
       .right {
+        overflow: hidden;
         width: 50%;
         height: 100%;
-        background-image: url("../assets/woman-coat.jpg");
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: 1000ms;
-        &:hover {
-          background-size: 105%;
-        }
       }
       .left {
         padding: 2rem;
@@ -214,6 +233,62 @@
     }
   }
   .bottom-section {
-    height: 20rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding: 8rem 2rem;
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    .bottom {
+      max-width: 100%;
+      display: flex;
+      flex: 1;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      gap: 2rem;
+      .quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        max-width: 20rem;
+        .img {
+          background-color: grey;
+          height: 15rem;
+          width: 15rem;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .img1 {
+          background-image: url("../assets/sustainable.jpg");
+        }
+        .img2 {
+          background-image: url("../assets/ethical.jpg");
+        }
+        .img3 {
+          background-image: url("../assets/fashionable.jpg");
+        }
+        h3 {
+          margin: 0;
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+        p {
+          margin: 0;
+          font-weight: 200;
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    }
   }
 }
