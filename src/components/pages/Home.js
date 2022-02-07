@@ -11,7 +11,7 @@ import {
   fadeInLeft,
 } from "../../animations/Variants";
 
-const TopSection = () => {
+const Section1 = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   const controls = useAnimation();
   useEffect(() => {
@@ -22,7 +22,7 @@ const TopSection = () => {
     }
   }, [controls, inView]);
   return (
-    <div className="top-section" ref={ref}>
+    <div className="section1" ref={ref}>
       <motion.div
         className="cta"
         initial="hidden"
@@ -49,12 +49,12 @@ const TopSection = () => {
           </motion.div>
         </Link>
       </motion.div>
-      <img src={require("../../assets/home-main.jpg")} alt="home-main" />
+      <img src={require("../../assets/home-main2.jpg")} alt="home-main" />
     </div>
   );
 };
-const Featured = () => {
-  const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: true });
+const Section2 = () => {
+  const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: true });
   const controls = useAnimation();
   useEffect(() => {
     if (inView) {
@@ -63,23 +63,24 @@ const Featured = () => {
       controls.start("hidden");
     }
   }, [controls, inView]);
+
   return (
-    <div className="featured" ref={ref}>
-      <h1>Featured items</h1>
-      <motion.div
-        className="cards"
-        initial="hidden"
-        animate={controls}
-        variants={{
-          visible: {
-            transition: {
-              delayChildren: 0.5,
-              staggerChildren: 0.4,
-              easing,
-            },
+    <motion.div
+      className="section2"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        visible: {
+          transition: {
+            staggerChildren: 0.3,
+            easing,
           },
-        }}
-      >
+        },
+      }}
+    >
+      <motion.h1 variants={fadeInUp}>Featured items</motion.h1>
+      <div className="cards">
         <motion.div className="card" variants={fadeInUp}>
           <img src="" alt="" />
           <p>item1</p>
@@ -100,11 +101,11 @@ const Featured = () => {
           <p>item4</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
-const MiddleSection = () => {
+const Section3 = () => {
   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
   const controls = useAnimation();
   useEffect(() => {
@@ -117,14 +118,14 @@ const MiddleSection = () => {
   return (
     <div ref={ref}>
       <motion.div
-        className="middle-section"
+        className="section3"
         initial="hidden"
         animate={controls}
         variants={{
           visible: {
             transition: {
-              staggerChildren: 1,
-              delayChildren: 0.5,
+              staggerChildren: 0.7,
+              delayChildren: 0.3,
               easing,
             },
           },
@@ -162,7 +163,7 @@ const MiddleSection = () => {
     </div>
   );
 };
-const BottomSection = () => {
+const Section4 = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   const controls = useAnimation();
   useEffect(() => {
@@ -175,7 +176,7 @@ const BottomSection = () => {
 
   return (
     <motion.div
-      className="bottom-section"
+      className="section4"
       ref={ref}
       initial="hidden"
       animate={controls}
@@ -227,10 +228,10 @@ const BottomSection = () => {
 const Home = () => {
   return (
     <div className="home">
-      <TopSection />
-      <Featured />
-      <MiddleSection />
-      <BottomSection />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
     </div>
   );
 };

@@ -3,33 +3,42 @@
   flex-direction: column;
   flex: 1;
   width: 100%;
-  .top-section {
+  .section1 {
     position: relative;
-    background-image: url("../assets/about-main.jpg");
-    height: 40rem;
+    height: 45rem;
     max-width: 100%;
     padding-right: 5rem;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     color: white;
+    overflow: hidden;
     transition: 1000ms;
     &::after {
-      position: absolute;
       content: "";
-      background: linear-gradient(90deg, #00000034 0%, #0000008e 100%);
+      position: absolute;
       top: 0;
-      right: 0;
-      width: 100%;
+      left: 0;
       height: 100%;
+      width: 100%;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(90deg, #ffffff00 0%, #00000067 100%);
     }
-    &:hover {
-      background-size: 105%;
+    &:hover > img {
+      transform: scale(1);
     }
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: scale(1.05);
+      transition: transform 1000ms;
+    }
+
     .cta {
       display: flex;
       flex-direction: column;
@@ -79,6 +88,65 @@
           top: 3px;
           border: black solid 2px;
         }
+      }
+    }
+  }
+  .section2 {
+    height: auto;
+    max-width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 4rem;
+      max-width: 60rem;
+      p {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 200;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        background: grey;
+      }
+      .text1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        background-color: #f5a7a7;
+        box-shadow: #5f3232 12px 12px 0 2px;
+      }
+      .text2 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        background-color: #fad7b0;
+        box-shadow: #684c2b 12px 12px 0 2px;
+      }
+      .text3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        background-color: #f3cab0;
+        box-shadow: #583a27 12px 12px 0 2px;
+      }
+      .text4 {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        background-color: #b0d3fa;
+        box-shadow: #2b425c 12px 12px 0 2px;
       }
     }
   }

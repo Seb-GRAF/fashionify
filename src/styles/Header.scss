@@ -1,6 +1,5 @@
 header {
   z-index: 10;
-  // backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,12 +10,30 @@ header {
   padding: 0.5rem 1rem;
   position: fixed;
   a {
+    position: relative;
     text-decoration: none;
     color: #000000;
     background: none;
     border: none;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    // cursor: default;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 3px;
+      bottom: -3px;
+      left: 0;
+      background-color: #ff623a;
+      transform-origin: bottom;
+      transition: transform 300ms ease;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom;
+    }
   }
   h1 {
     margin: 0;

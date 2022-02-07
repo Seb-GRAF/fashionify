@@ -13,6 +13,9 @@ const Header = () => {
         </Link>
       </div>
       <div className="right">
+        <Link className="shop" to="/">
+          Home
+        </Link>
         <Link className="shop" to="/shop">
           Shop
         </Link>
