@@ -1,32 +1,33 @@
 {
   "files": {
-    "main.css": "/fashionify/static/css/main.dd18c8b1.css",
-    "main.js": "/fashionify/static/js/main.c13633ba.js",
+    "main.css": "/fashionify/static/css/main.a8c6db96.css",
+    "main.js": "/fashionify/static/js/main.aaa66141.js",
+    "static/media/3.png": "/fashionify/static/media/3.97fd7370494bbb05be8f.png",
+    "static/media/9.png": "/fashionify/static/media/9.ce8d49d8a73f17b78ec1.png",
     "static/media/woman-coat.jpg": "/fashionify/static/media/woman-coat.1aa4b1bb13bc02a37685.jpg",
     "static/media/ethical.jpg": "/fashionify/static/media/ethical.9475730a0e5c23d836c2.jpg",
     "static/media/home-main2.jpg": "/fashionify/static/media/home-main2.8e6067a4b4a9194a386d.jpg",
-    "static/media/sustainable.jpg": "/fashionify/static/media/sustainable.a8db76e192fc69d53371.jpg",
-    "static/media/1.png": "/fashionify/static/media/1.9cce5adf92a92a8b14ce.png",
-    "static/media/man-leather-jacket.jpg": "/fashionify/static/media/man-leather-jacket.feaedb2ac90839e9db07.jpg",
+    "static/media/1.png": "/fashionify/static/media/1.1bd700c5df188a70d36f.png",
     "static/media/2.png": "/fashionify/static/media/2.d77e804b0b1b69f1b773.png",
-    "static/media/3.png": "/fashionify/static/media/3.3f1403bf7d33bea77329.png",
-    "static/media/10.png": "/fashionify/static/media/10.281bc700272d05899c53.png",
-    "static/media/about-main.jpg": "/fashionify/static/media/about-main.0345bec6981467026647.jpg",
-    "static/media/fashionable.jpg": "/fashionify/static/media/fashionable.08f14aedec5827e864f9.jpg",
-    "static/media/8.png": "/fashionify/static/media/8.d56deb155ecf4b50b2a8.png",
-    "static/media/11.png": "/fashionify/static/media/11.5a4e0e4db3ee522e0682.png",
-    "static/media/5.png": "/fashionify/static/media/5.be4aa5a46054853b48a4.png",
-    "static/media/4.png": "/fashionify/static/media/4.7321f52b6e516005b51c.png",
-    "static/media/6.png": "/fashionify/static/media/6.74596366cc1d4e4cfc6e.png",
+    "static/media/sustainable.jpg": "/fashionify/static/media/sustainable.a8db76e192fc69d53371.jpg",
+    "static/media/man-leather-jacket.jpg": "/fashionify/static/media/man-leather-jacket.feaedb2ac90839e9db07.jpg",
+    "static/media/0.png": "/fashionify/static/media/0.bb349751df302e8423a9.png",
+    "static/media/5.png": "/fashionify/static/media/5.b6365ed2bc033f926331.png",
+    "static/media/8.png": "/fashionify/static/media/8.7636b686864298fba5aa.png",
     "static/media/7.png": "/fashionify/static/media/7.fd032cdbcbc2529586ca.png",
+    "static/media/4.png": "/fashionify/static/media/4.ba6345c571c13ab49e34.png",
+    "static/media/10.png": "/fashionify/static/media/10.11d24f6bc18c5eca6857.png",
+    "static/media/6.png": "/fashionify/static/media/6.74596366cc1d4e4cfc6e.png",
+    "static/media/about-main.jpg": "/fashionify/static/media/about-main.0345bec6981467026647.jpg",
+    "static/media/11.png": "/fashionify/static/media/11.5a4e0e4db3ee522e0682.png",
+    "static/media/fashionable.jpg": "/fashionify/static/media/fashionable.08f14aedec5827e864f9.jpg",
     "static/media/12.png": "/fashionify/static/media/12.3fa51afb0cbeaeb102fb.png",
-    "static/media/9.png": "/fashionify/static/media/9.b073b8bcc0e7c4434dfc.png",
     "index.html": "/fashionify/index.html",
-    "main.dd18c8b1.css.map": "/fashionify/static/css/main.dd18c8b1.css.map",
-    "main.c13633ba.js.map": "/fashionify/static/js/main.c13633ba.js.map"
+    "main.a8c6db96.css.map": "/fashionify/static/css/main.a8c6db96.css.map",
+    "main.aaa66141.js.map": "/fashionify/static/js/main.aaa66141.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd18c8b1.css",
-    "static/js/main.c13633ba.js"
+    "static/css/main.a8c6db96.css",
+    "static/js/main.aaa66141.js"
   ]
 }
