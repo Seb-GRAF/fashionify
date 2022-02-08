@@ -90,8 +90,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[0].image} alt="" />
-          <p>{products[0].name}</p>
+          <img src={products[31].image} alt="" />
+          <p>{products[31].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
@@ -102,8 +102,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[8].image} alt="" />
-          <p>{products[8].name}</p>
+          <img src={products[50].image} alt="" />
+          <p>{products[50].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
@@ -114,8 +114,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[12].image} alt="" />
-          <p>{products[12].name}</p>
+          <img src={products[55].image} alt="" />
+          <p>{products[55].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
@@ -126,8 +126,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[10].image} alt="" />
-          <p>{products[10].name}</p>
+          <img src={products[62].image} alt="" />
+          <p>{products[62].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
       </div>
