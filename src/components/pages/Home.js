@@ -3,6 +3,7 @@ import "../../styles/Home.scss";
 import { Link } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import products from "../products/products";
 import {
   easing,
   fadeInUp,
@@ -89,8 +90,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src="" alt="" />
-          <p>item1</p>
+          <img src={products[0].image} alt="" />
+          <p>{products[0].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
@@ -101,8 +102,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src="" alt="" />
-          <p>item2</p>
+          <img src={products[8].image} alt="" />
+          <p>{products[8].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
@@ -113,8 +114,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src="" alt="" />
-          <p>item3</p>
+          <img src={products[12].image} alt="" />
+          <p>{products[12].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
@@ -125,8 +126,8 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src="" alt="" />
-          <p>item4</p>
+          <img src={products[10].image} alt="" />
+          <p>{products[10].name}</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
       </div>

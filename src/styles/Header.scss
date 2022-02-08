@@ -50,28 +50,6 @@ header {
     text-shadow: #ff613a 0 0 0;
     transition: 500ms ease-in-out;
     transition-delay: 100ms;
-    &::after {
-      z-index: -1;
-      position: absolute;
-      content: "";
-      background-color: #ff613a;
-      width: 90%;
-      height: 4px;
-      right: 18px;
-      bottom: -1px;
-      transform: scaleX(0);
-      transition: 300ms ease-in-out;
-      transform-origin: bottom right;
-    }
-    &:hover::after {
-      transition-delay: 300ms;
-      transform: scaleX(1);
-      transform-origin: bottom right;
-    }
-    &:hover {
-      text-shadow: #ff613a 2px 2px 1px;
-      transition: 400ms ease-in-out;
-    }
   }
   .right {
     display: flex;
