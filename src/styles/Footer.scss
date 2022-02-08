@@ -1,10 +1,10 @@
 footer {
-  //   padding: 2rem;
   height: 20rem;
   width: 100%;
   background: #f7f7f7;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  cursor: default;
   div {
     padding: 2rem;
     .form {
@@ -24,9 +24,10 @@ footer {
         font-size: 1rem;
         font-weight: 600;
         padding: 0.2rem 1rem;
-        background: rgb(116, 81, 145);
+        background: #ff613a;
         color: white;
         border: none;
+        cursor: pointer;
       }
     }
     h2,

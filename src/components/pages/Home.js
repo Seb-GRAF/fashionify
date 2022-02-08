@@ -9,7 +9,7 @@ import {
   fadeInDown,
   fadeInRight,
   fadeInLeft,
-} from "../../animations/Variants";
+} from "../animations/Variants";
 
 const Section1 = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -81,22 +81,50 @@ const Section2 = () => {
     >
       <motion.h1 variants={fadeInUp}>Featured items</motion.h1>
       <div className="cards">
-        <motion.div className="card" variants={fadeInUp}>
+        <motion.div
+          className="card"
+          variants={fadeInUp}
+          whileHover={{
+            scale: 1.1,
+            transition: { type: "easeInOut", duration: 0.1 },
+          }}
+        >
           <img src="" alt="" />
           <p>item1</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
-        <motion.div className="card" variants={fadeInUp}>
+        <motion.div
+          className="card"
+          variants={fadeInUp}
+          whileHover={{
+            scale: 1.1,
+            transition: { type: "easeInOut", duration: 0.1 },
+          }}
+        >
           <img src="" alt="" />
           <p>item2</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
-        <motion.div className="card" variants={fadeInUp}>
+        <motion.div
+          className="card"
+          variants={fadeInUp}
+          whileHover={{
+            scale: 1.1,
+            transition: { type: "easeInOut", duration: 0.1 },
+          }}
+        >
           <img src="" alt="" />
           <p>item3</p>
           <button className="add-to-cart">Add to cart</button>
         </motion.div>
-        <motion.div className="card" variants={fadeInUp}>
+        <motion.div
+          className="card"
+          variants={fadeInUp}
+          whileHover={{
+            scale: 1.1,
+            transition: { type: "easeInOut", duration: 0.1 },
+          }}
+        >
           <img src="" alt="" />
           <p>item4</p>
           <button className="add-to-cart">Add to cart</button>

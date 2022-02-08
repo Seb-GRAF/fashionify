@@ -9,7 +9,7 @@ import {
   fadeInDown,
   fadeInRight,
   fadeInLeft,
-} from "../../animations/Variants";
+} from "../animations/Variants";
 
 const Section1 = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -81,7 +81,6 @@ const Section2 = () => {
           variants={fadeInRight}
           whileHover={{
             scale: 1.05,
-            transition: { type: "spring", duration: 0.5 },
           }}
         >
           It’s about that upcoming party, the catch up with friends and all the
@@ -95,7 +94,6 @@ const Section2 = () => {
           variants={fadeInLeft}
           whileHover={{
             scale: 1.05,
-            transition: { type: "spring", duration: 0.5 },
           }}
         >
           By reacting quickly to the latest trends and interpreting them in a
@@ -109,7 +107,6 @@ const Section2 = () => {
           variants={fadeInRight}
           whileHover={{
             scale: 1.05,
-            transition: { type: "spring", duration: 0.5 },
           }}
         >
           We love all things new and get as much of a buzz out of constantly
@@ -122,7 +119,6 @@ const Section2 = () => {
           variants={fadeInLeft}
           whileHover={{
             scale: 1.05,
-            transition: { type: "spring", duration: 0.5 },
           }}
         >
           We’re passionate about what we do and most importantly, we have fun

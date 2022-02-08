@@ -3,11 +3,12 @@
   flex-direction: column;
   flex: 1;
   width: 100%;
+  cursor: default;
   .section1 {
     position: relative;
     height: 45rem;
     max-width: 100%;
-    padding-right: 5rem;
+    padding: 0 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -118,6 +119,9 @@
           transition: 500ms ease-in-out;
           opacity: 0;
         }
+        &:hover {
+          box-shadow: #0000000a 0px 10px 10px;
+        }
         &:hover > p {
           opacity: 1;
         }
@@ -126,8 +130,10 @@
           background: rgba(0, 0, 0, 0.062);
           border: none;
           opacity: 1;
-          color: white;
-          font-size: 1rem;
+          color: #ff613a;
+          font-size: 1.2rem;
+          font-weight: 500;
+          letter-spacing: 2px;
           height: 4rem;
           transition: 300ms ease-in-out;
           transform: scaleY(0);

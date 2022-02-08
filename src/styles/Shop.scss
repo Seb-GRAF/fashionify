@@ -1,0 +1,70 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 60rem;
+    list-style: none;
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .image-container {
+        position: relative;
+        background-color: #f7f7f7;
+        height: 15rem;
+        width: 15rem;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .add-to-cart {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          background: #00000018;
+          border: none;
+          opacity: 1;
+          color: #ff613a;
+          text-shadow: white 0px 0px 2px;
+          font-size: 1.2rem;
+          font-weight: 500;
+          letter-spacing: 2px;
+          height: 4rem;
+          transition: 300ms ease-in-out;
+          transform: scaleY(0);
+          transform-origin: bottom;
+          &:hover {
+            background: #0000002d;
+          }
+        }
+        &:hover > .add-to-cart {
+          transform: scaleY(1);
+        }
+        img {
+          object-position: center;
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: cover;
+          transition: 1000ms;
+        }
+        &:hover > img {
+          transform: scale(0.95);
+        }
+      }
+      p {
+        align-self: flex-start;
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+  }
+}
