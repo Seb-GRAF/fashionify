@@ -37,9 +37,17 @@
     }
     .categories {
       display: flex;
-      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
       padding: 0 1rem;
+      gap: 1rem;
+      .button {
+        display: flex;
+        gap: 1rem;
+      }
       button {
+        transition: 200ms;
         cursor: pointer;
         background: none;
         border: none;
@@ -49,11 +57,30 @@
         }
       }
       button.active {
-        background: #ffdcd3;
+        transition: 200ms;
+        background: #ffdcd3c2;
+        box-shadow: #00000036 0 3px 5px;
+        transform: translateY(-3px);
+      }
+      input {
+        height: 1.5rem;
+        width: 15rem;
+        outline: none;
+        border: solid black 1px;
+        transition: 200ms;
+        padding: 0 0.2rem;
+        &:focus {
+          background: #ffdcd357;
+          box-shadow: #00000036 0 0 5px;
+        }
       }
     }
   }
   ul {
+    a {
+      text-decoration: none;
+      color: black;
+    }
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -76,29 +103,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .add-to-cart {
-          position: absolute;
-          width: 100%;
-          bottom: 0;
-          background: #00000018;
-          border: none;
-          opacity: 1;
-          color: #ff613a;
-          text-shadow: #0000003b 0px 0px 2px;
-          font-size: 1.2rem;
-          font-weight: 500;
-          letter-spacing: 2px;
-          height: 4rem;
-          transition: 300ms ease-in-out;
-          transform: scaleY(0);
-          transform-origin: bottom;
-          &:hover {
-            background: #0000002d;
-          }
-        }
-        &:hover > .add-to-cart {
-          transform: scaleY(1);
-        }
         img {
           object-position: center;
           max-height: 100%;

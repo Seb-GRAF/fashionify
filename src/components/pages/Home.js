@@ -90,9 +90,10 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[31].image} alt="" />
+          <Link to={`/shop/${products[31].name.replace(/\s/g, "-")}`}>
+            <img src={products[31].image} alt="" />
+          </Link>
           <p>{products[31].name}</p>
-          <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
           className="card"
@@ -102,9 +103,10 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[50].image} alt="" />
+          <Link to={`/shop/${products[50].name.replace(/\s/g, "-")}`}>
+            <img src={products[50].image} alt="" />
+          </Link>
           <p>{products[50].name}</p>
-          <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
           className="card"
@@ -114,9 +116,10 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[55].image} alt="" />
+          <Link to={`/shop/${products[55].name.replace(/\s/g, "-")}`}>
+            <img src={products[55].image} alt="" />
+          </Link>
           <p>{products[55].name}</p>
-          <button className="add-to-cart">Add to cart</button>
         </motion.div>
         <motion.div
           className="card"
@@ -126,9 +129,10 @@ const Section2 = () => {
             transition: { type: "easeInOut", duration: 0.1 },
           }}
         >
-          <img src={products[62].image} alt="" />
+          <Link to={`/shop/${products[62].name.replace(/\s/g, "-")}`}>
+            <img src={products[62].image} alt="" />
+          </Link>
           <p>{products[62].name}</p>
-          <button className="add-to-cart">Add to cart</button>
         </motion.div>
       </div>
     </motion.div>
