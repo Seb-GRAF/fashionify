@@ -5,6 +5,7 @@ import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import { Link } from "react-router-dom";
 
 const Product = ({ e, handleAddToCart }) => {
+  const [size, setSize] = useState("S");
   return (
     <div className="product">
       <Link to="/shop" className="return">
@@ -21,13 +22,13 @@ const Product = ({ e, handleAddToCart }) => {
           <h3>
             CHF {e.price.toFixed(2)} <p>VAT included</p>
           </h3>
-          <select id="">
+          <select onChange={(e) => setSize(e.target.value)}>
             <option value="S">EU - Small</option>
             <option value="M">EU - Medium</option>
             <option value="L">EU - Large</option>
             <option value="XL">EU - XL</option>
           </select>
-          <button onClick="handleAddToCart">Add to cart</button>
+          <button onClick={() => handleAddToCart(e, size)}>Add to cart</button>
         </div>
       </div>
     </div>
