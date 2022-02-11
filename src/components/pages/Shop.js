@@ -144,7 +144,7 @@ const Shop = ({
             if (e.name.toLowerCase().includes(searchValue.toLowerCase())) {
               return <Card key={uniqid()} e={e} />;
             }
-          } else if (e.cat == category) return <Card key={uniqid()} e={e} />;
+          } else if (e.cat === category) return <Card key={uniqid()} e={e} />;
         })}
       </ul>
     </div>

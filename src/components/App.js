@@ -33,7 +33,7 @@ const App = () => {
     let isInCart = false;
     if (cart.length > 0)
       cart.forEach((item) => {
-        if (item.product.name === e.name) {
+        if (item.product.name === e.name && item.size === size) {
           item.quantity += 1;
           setAmountInCart(amountInCart + 1);
           isInCart = true;
@@ -75,7 +75,16 @@ const App = () => {
               />
             );
           })}
-          <Route path="/shopping-cart" element={<ShoppingCart />} />
+          <Route
+            path="/shopping-cart"
+            element={
+              <ShoppingCart
+                cart={cart}
+                amountInCart={amountInCart}
+                setAmountInCart={setAmountInCart}
+              />
+            }
+          />
         </Routes>
         <Footer />
       </HashRouter>
