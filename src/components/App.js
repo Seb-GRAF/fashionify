@@ -14,9 +14,16 @@ import uniqid from "uniqid";
 const App = () => {
   const [cart, setCart] = useState([]);
   const [amountInCart, setAmountInCart] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [gender, setGender] = useState("men");
   const [category, setCategory] = useState("tshirts");
   const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    let price = 0;
+    cart.forEach((e) => (price += e.quantity * e.product.price));
+    setTotalPrice(price);
+  }, [amountInCart]);
 
   // ensure that page scrolls to top on tab change
   const ScrollToTop = () => {
@@ -48,7 +55,7 @@ const App = () => {
   return (
     <div className="main">
       <HashRouter basename="/">
-        <Header />
+        <Header amountInCart={amountInCart} />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -80,8 +87,11 @@ const App = () => {
             element={
               <ShoppingCart
                 cart={cart}
+                setCart={setCart}
                 amountInCart={amountInCart}
                 setAmountInCart={setAmountInCart}
+                totalPrice={totalPrice}
+                setTotalPrice={setTotalPrice}
               />
             }
           />

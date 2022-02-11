@@ -120,7 +120,7 @@ const Shop = ({
             <img src={e.image} alt={e.name} />
           </div>
           <p className="name">{e.name}</p>
-          <p className="price">{e.price} CHF</p>
+          <p className="price">{e.price.toFixed(2)} CHF</p>
         </Link>
       </li>
     );

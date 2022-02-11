@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ amountInCart }) => {
   return (
     <header>
       <div className="left">
@@ -24,6 +24,8 @@ const Header = () => {
         </Link>
         <Link className="cart" to="/shopping-cart">
           <FontAwesomeIcon icon={faShoppingBag} />
+          {amountInCart > 0 && <p>{amountInCart}</p>}
+          {amountInCart >= 100 && <p>{"++"}</p>}
         </Link>
       </div>
     </header>

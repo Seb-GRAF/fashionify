@@ -1,31 +1,98 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { Link } from "react-router-dom";
 import uniqid from "uniqid";
+import "../../styles/ShoppingCart.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const ShoppingCart = ({ cart, amountInCart, setAmountInCart }) => {
-  const handleChangeQuantity = (input, e) => {
-    input.preventDefault();
-    e.quantity = input.target.value;
-    let newAmount = 0;
-    cart.forEach((product) => (newAmount += parseInt(product.quantity)));
-    setAmountInCart(newAmount);
+const ShoppingCart = ({
+  cart,
+  setCart,
+  amountInCart,
+  setAmountInCart,
+  totalPrice,
+}) => {
+  const handleIncreaseQuantity = (e) => {
+    e.quantity += 1;
+    setAmountInCart(amountInCart + 1);
   };
+  const handleDecreaseQuantity = (e) => {
+    if (e.quantity === 0) return;
+    e.quantity -= 1;
+    setAmountInCart(amountInCart - 1);
+  };
+
+  const handleDelete = (item) => {
+    setAmountInCart(amountInCart - item.quantity);
+    let newCart = cart.filter((e) => e !== item);
+    handleCartChange(newCart);
+  };
+
+  const handleCartChange = useCallback((newCart) => setCart(newCart));
+
   return (
-    <div>
-      <p>total = {amountInCart}</p>
+    <div className="shopping-cart">
+      {amountInCart < 1 && (
+        <div className="empty-cart">
+          <p>Your cart is empty</p>
+          <p>Fill it up with our collection!</p>
+          <Link to="/shop">Shop</Link>
+        </div>
+      )}
       <ul>
         {cart.map((element) => {
+          if (element.quantity === 0) return handleDelete(element);
           return (
             <li key={uniqid()}>
-              <p>{element.product.name}</p>
-              <p>{element.size}</p>
-              <input
-                type="number"
-                defaultValue={element.quantity}
-                onChange={(input) => handleChangeQuantity(input, element)}
-              ></input>
+              <Link to={`/shop/${element.product.name.replace(/\s/g, "-")}`}>
+                <img src={element.product.image} alt="product-image" />
+              </Link>
+              <div className="decription">
+                <Link to={`/shop/${element.product.name.replace(/\s/g, "-")}`}>
+                  <p className="name">{element.product.name}</p>
+                </Link>
+                <p className="size">{element.size}</p>
+                <div
+                  className="delete"
+                  onClick={() => {
+                    handleDelete(element);
+                  }}
+                >
+                  <FontAwesomeIcon icon={faTrash} />
+                  <p>Remove</p>
+                </div>
+              </div>
+              <div className="add-and-remove">
+                <button onClick={() => handleDecreaseQuantity(element)}>
+                  −
+                </button>
+                <p>{element.quantity}</p>
+                <button onClick={() => handleIncreaseQuantity(element)}>
+                  +
+                </button>
+              </div>
             </li>
           );
         })}
+        {amountInCart > 0 && (
+          <div className="total-price">
+            <h3>Total</h3>
+
+            <div className="sub-total">
+              <p>Sub-total</p>
+              <div>{totalPrice.toFixed(2)}</div>
+            </div>
+            <div className="shipping">
+              <p>Shipping</p>
+              <div>FREE</div>
+            </div>
+            <div className="total">
+              <p>Total (VAT incl.)</p>
+              <div>CHF {totalPrice.toFixed(2)}</div>
+            </div>
+            <a>ORDER</a>
+          </div>
+        )}
       </ul>
     </div>
   );

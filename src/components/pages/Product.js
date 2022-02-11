@@ -6,6 +6,13 @@ import { Link } from "react-router-dom";
 
 const Product = ({ e, handleAddToCart }) => {
   const [size, setSize] = useState("Small");
+
+  const handleChangeButtonColor = (btn) => {
+    btn.target.classList.add("clicked");
+    setTimeout(() => {
+      btn.target.classList.remove("clicked");
+    }, 1500);
+  };
   return (
     <div className="product">
       <Link to="/shop" className="return">
@@ -28,7 +35,14 @@ const Product = ({ e, handleAddToCart }) => {
             <option value="Large">EU - Large</option>
             <option value="XL">EU - XL</option>
           </select>
-          <button onClick={() => handleAddToCart(e, size)}>Add to cart</button>
+          <button
+            onClick={(btn) => {
+              handleAddToCart(e, size);
+              handleChangeButtonColor(btn);
+            }}
+          >
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

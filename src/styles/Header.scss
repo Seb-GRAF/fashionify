@@ -53,6 +53,28 @@ header {
   }
   .right {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
+    .cart {
+      position: relative;
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        margin: 0;
+        bottom: -10px;
+        right: -10px;
+        background-color: #ff613a;
+        border-radius: 50%;
+        min-width: 1rem;
+        min-height: 1rem;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: white;
+        padding: 0.1rem;
+      }
+    }
   }
 }
