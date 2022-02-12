@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fashionify/static/css/main.0e303071.css",
-    "main.js": "/fashionify/static/js/main.a352c24b.js",
+    "main.css": "/fashionify/static/css/main.b8093adc.css",
+    "main.js": "/fashionify/static/js/main.9e3e0e90.js",
     "static/media/3.png": "/fashionify/static/media/3.97fd7370494bbb05be8f.png",
     "static/media/9.png": "/fashionify/static/media/9.ce8d49d8a73f17b78ec1.png",
     "static/media/woman-coat.jpg": "/fashionify/static/media/woman-coat.1aa4b1bb13bc02a37685.jpg",
@@ -22,12 +22,13 @@
     "static/media/11.png": "/fashionify/static/media/11.5a4e0e4db3ee522e0682.png",
     "static/media/fashionable.jpg": "/fashionify/static/media/fashionable.08f14aedec5827e864f9.jpg",
     "static/media/12.png": "/fashionify/static/media/12.3fa51afb0cbeaeb102fb.png",
+    "static/media/credit-card-logos.png": "/fashionify/static/media/credit-card-logos.a6d3285dfc070d12ada5.png",
     "index.html": "/fashionify/index.html",
-    "main.0e303071.css.map": "/fashionify/static/css/main.0e303071.css.map",
-    "main.a352c24b.js.map": "/fashionify/static/js/main.a352c24b.js.map"
+    "main.b8093adc.css.map": "/fashionify/static/css/main.b8093adc.css.map",
+    "main.9e3e0e90.js.map": "/fashionify/static/js/main.9e3e0e90.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e303071.css",
-    "static/js/main.a352c24b.js"
+    "static/css/main.b8093adc.css",
+    "static/js/main.9e3e0e90.js"
   ]
 }
