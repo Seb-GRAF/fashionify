@@ -119,8 +119,8 @@ const Shop = ({
           <div className="image-container">
             <img src={e.image} alt={e.name} />
           </div>
-          <p className="name">{e.name}</p>
           <p className="price">{e.price.toFixed(2)} CHF</p>
+          <p className="name">{e.name}</p>
         </Link>
       </li>
     );

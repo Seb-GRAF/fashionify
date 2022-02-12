@@ -120,9 +120,14 @@
         }
       }
       p {
+        max-width: 15rem;
+        justify-self: flex-start;
         align-self: flex-start;
         margin: 0;
         font-weight: 300;
+      }
+      .name {
+        height: 2.5rem;
       }
     }
   }
