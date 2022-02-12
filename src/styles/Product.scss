@@ -21,7 +21,6 @@
     display: flex;
     flex: 1;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 4rem;
@@ -94,6 +93,31 @@
         background-size: 100% 100%;
         color: rgb(255, 255, 255);
         transition: 600ms;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 933px) {
+  .product {
+    .main {
+      flex-direction: column-reverse;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      padding-bottom: 3rem;
+      //   height: auto;
+      //   flex: 1;
+      .left {
+        width: 100%;
+        .img {
+          width: 100%;
+          height: auto;
+        }
+        img {
+        }
+      }
+      .right {
+        width: 100%;
       }
     }
   }

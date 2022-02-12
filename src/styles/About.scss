@@ -95,7 +95,7 @@
   .section2 {
     height: auto;
     max-width: 100%;
-    padding: 4rem;
+    padding: 4rem 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,6 +153,16 @@
         &:hover {
           box-shadow: #2b425cb7 18px 18px 5px 2px;
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .about {
+    .section2 {
+      .grid {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

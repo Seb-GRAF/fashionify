@@ -1,6 +1,5 @@
 import "../../styles/About.scss";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
@@ -131,9 +130,10 @@ const Section2 = () => {
     </div>
   );
 };
-const About = () => {
+const About = ({ ScrollToTop }) => {
   return (
     <div className="about">
+      <ScrollToTop />
       <Section1 />
       <Section2 />
     </div>

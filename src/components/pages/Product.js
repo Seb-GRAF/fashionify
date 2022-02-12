@@ -4,7 +4,7 @@ import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import { Link } from "react-router-dom";
 
-const Product = ({ e, handleAddToCart }) => {
+const Product = ({ e, handleAddToCart, ScrollToTop }) => {
   const [size, setSize] = useState("Small");
 
   const handleChangeButtonColor = (btn) => {
@@ -13,6 +13,7 @@ const Product = ({ e, handleAddToCart }) => {
       btn.target.classList.remove("clicked");
     }, 1500);
   };
+
   return (
     <div className="product">
       <Link to="/shop" className="return">
@@ -35,8 +36,10 @@ const Product = ({ e, handleAddToCart }) => {
             <option value="Large">EU - Large</option>
             <option value="XL">EU - XL</option>
           </select>
+          <ScrollToTop />
           <button
             onClick={(btn) => {
+              btn.preventDefault();
               handleAddToCart(e, size);
               handleChangeButtonColor(btn);
             }}

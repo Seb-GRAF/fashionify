@@ -1,13 +1,14 @@
 .shopping-cart {
+  height: 100%;
   display: flex;
   flex: 1;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
-  max-height: 100%;
   gap: 2rem;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   .empty-cart {
+    align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,6 +35,11 @@
         background: #ff896c;
       }
     }
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin: 0;
   }
   a {
     text-decoration: none;
@@ -92,7 +98,7 @@
         margin: 0;
       }
       .name {
-        width: 12rem;
+        max-width: 12rem;
       }
       .size {
         font-weight: 400;
@@ -153,5 +159,10 @@
 
       width: 100%;
     }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .shopping-cart {
+    padding: 1rem;
   }
 }

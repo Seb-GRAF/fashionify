@@ -1,9 +1,11 @@
 footer {
-  height: 20rem;
+  box-sizing: border-box;
+  // min-height: 20rem;
   width: 100%;
   background: #f7f7f7;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  // flex: 1;
   cursor: default;
   div {
     padding: 2rem;
@@ -52,6 +54,22 @@ footer {
       margin-top: 1rem;
       flex-direction: column;
       padding: 0;
+    }
+  }
+}
+@media only screen and (max-width: 640px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: auto;
+    align-items: center;
+    .cta {
+      grid-column: 1 / 3;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

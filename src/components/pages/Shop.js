@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import products from "../products/products";
 import { Link } from "react-router-dom";
 import "../../styles/Shop.scss";
@@ -87,6 +87,7 @@ const Shop = ({
   setCategory,
   searchValue,
   setSearchValue,
+  ScrollToTop,
 }) => {
   const handleSelectCategory = (selection) => {
     document.querySelector(".search").value = "";
@@ -128,6 +129,7 @@ const Shop = ({
 
   return (
     <div className="shop">
+      <ScrollToTop />
       <Categories
         gender={gender}
         category={category}

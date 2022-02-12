@@ -139,32 +139,10 @@ const Section2 = () => {
   );
 };
 const Section3 = () => {
-  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
-  const controls = useAnimation();
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
   return (
-    <div ref={ref}>
-      <motion.div
-        className="section3"
-        initial="hidden"
-        animate={controls}
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.7,
-              delayChildren: 0.3,
-              easing,
-            },
-          },
-        }}
-      >
-        <motion.div className="top" variants={fadeInRight}>
+    <div>
+      <div className="section3">
+        <div className="top">
           <div className="left">
             <img
               src={require("../../assets/man-leather-jacket.jpg")}
@@ -178,21 +156,21 @@ const Section3 = () => {
               The best things are free, like our delivery!
             </p>
           </div>
-        </motion.div>
-        <motion.div className="bottom" variants={fadeInLeft}>
-          <div className="left" variants={fadeInRight}>
+        </div>
+        <div className="bottom">
+          <div className="left">
             <p>
               Explore our collection of fashion and order with free delivery
             </p>
           </div>
-          <div className="right" variants={fadeInLeft}>
+          <div className="right">
             <img
               src={require("../../assets/woman-coat.jpg")}
               alt="man-leather-jacket"
             />
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -258,9 +236,10 @@ const Section4 = () => {
     </motion.div>
   );
 };
-const Home = () => {
+const Home = ({ ScrollToTop }) => {
   return (
     <div className="home">
+      <ScrollToTop />
       <Section1 />
       <Section2 />
       <Section3 />

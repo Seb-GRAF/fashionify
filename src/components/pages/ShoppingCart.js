@@ -11,6 +11,7 @@ const ShoppingCart = ({
   amountInCart,
   setAmountInCart,
   totalPrice,
+  ScrollToTop,
 }) => {
   const handleIncreaseQuantity = (e) => {
     e.quantity += 1;
@@ -32,6 +33,7 @@ const ShoppingCart = ({
 
   return (
     <div className="shopping-cart">
+      <ScrollToTop />
       {amountInCart < 1 && (
         <div className="empty-cart">
           <p>Your cart is empty</p>
@@ -39,42 +41,45 @@ const ShoppingCart = ({
           <Link to="/shop">Shop</Link>
         </div>
       )}
-      <ul>
-        {cart.map((element) => {
-          if (element.quantity === 0) return handleDelete(element);
-          return (
-            <li key={uniqid()}>
-              <Link to={`/shop/${element.product.name.replace(/\s/g, "-")}`}>
-                <img src={element.product.image} alt="product-image" />
-              </Link>
-              <div className="decription">
+      {amountInCart > 0 && (
+        <ul>
+          <h1>My cart ({amountInCart} items)</h1>
+          {cart.map((element) => {
+            if (element.quantity === 0) return handleDelete(element);
+            return (
+              <li key={uniqid()}>
                 <Link to={`/shop/${element.product.name.replace(/\s/g, "-")}`}>
-                  <p className="name">{element.product.name}</p>
+                  <img src={element.product.image} alt="product-image" />
                 </Link>
-                <p className="size">{element.size}</p>
-                <div
-                  className="delete"
-                  onClick={() => {
-                    handleDelete(element);
-                  }}
-                >
-                  <FontAwesomeIcon icon={faTrash} />
-                  <p>Remove</p>
+                <div className="decription">
+                  <Link
+                    to={`/shop/${element.product.name.replace(/\s/g, "-")}`}
+                  >
+                    <p className="name">{element.product.name}</p>
+                  </Link>
+                  <p className="size">{element.size}</p>
+                  <div
+                    className="delete"
+                    onClick={() => {
+                      handleDelete(element);
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faTrash} />
+                    <p>Remove</p>
+                  </div>
                 </div>
-              </div>
-              <div className="add-and-remove">
-                <button onClick={() => handleDecreaseQuantity(element)}>
-                  −
-                </button>
-                <p>{element.quantity}</p>
-                <button onClick={() => handleIncreaseQuantity(element)}>
-                  +
-                </button>
-              </div>
-            </li>
-          );
-        })}
-        {amountInCart > 0 && (
+                <div className="add-and-remove">
+                  <button onClick={() => handleDecreaseQuantity(element)}>
+                    −
+                  </button>
+                  <p>{element.quantity}</p>
+                  <button onClick={() => handleIncreaseQuantity(element)}>
+                    +
+                  </button>
+                </div>
+              </li>
+            );
+          })}
           <div className="total-price">
             <h3>Total</h3>
 
@@ -92,8 +97,8 @@ const ShoppingCart = ({
             </div>
             <a>ORDER</a>
           </div>
-        )}
-      </ul>
+        </ul>
+      )}
     </div>
   );
 };

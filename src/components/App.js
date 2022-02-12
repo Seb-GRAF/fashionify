@@ -53,52 +53,58 @@ const App = () => {
   };
 
   return (
-    <div className="main">
-      <HashRouter basename="/">
-        <Header amountInCart={amountInCart} />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/shop"
-            element={
-              <Shop
-                gender={gender}
-                category={category}
-                searchValue={searchValue}
-                setGender={setGender}
-                setCategory={setCategory}
-                setSearchValue={setSearchValue}
-              />
-            }
-          />
-          <Route path="/about" element={<About />} />
-          {products.map((e) => {
-            return (
-              <Route
-                key={uniqid()}
-                path={`/shop/${e.name.replace(/\s/g, "-")}`}
-                element={<Product e={e} handleAddToCart={handleAddToCart} />}
-              />
-            );
-          })}
-          <Route
-            path="/shopping-cart"
-            element={
-              <ShoppingCart
-                cart={cart}
-                setCart={setCart}
-                amountInCart={amountInCart}
-                setAmountInCart={setAmountInCart}
-                totalPrice={totalPrice}
-                setTotalPrice={setTotalPrice}
-              />
-            }
-          />
-        </Routes>
-        <Footer />
-      </HashRouter>
-    </div>
+    <HashRouter basename="/">
+      <Header amountInCart={amountInCart} />
+      {/* <ScrollToTop /> */}
+      <Routes>
+        <Route path="/" element={<Home ScrollToTop={ScrollToTop} />} />
+        <Route
+          path="/shop"
+          element={
+            <Shop
+              gender={gender}
+              category={category}
+              searchValue={searchValue}
+              setGender={setGender}
+              setCategory={setCategory}
+              setSearchValue={setSearchValue}
+              ScrollToTop={ScrollToTop}
+            />
+          }
+        />
+        <Route path="/about" element={<About ScrollToTop={ScrollToTop} />} />
+        {products.map((e) => {
+          return (
+            <Route
+              key={uniqid()}
+              path={`/shop/${e.name.replace(/\s/g, "-")}`}
+              element={
+                <Product
+                  e={e}
+                  handleAddToCart={handleAddToCart}
+                  ScrollToTop={ScrollToTop}
+                />
+              }
+            />
+          );
+        })}
+        <Route
+          path="/shopping-cart"
+          element={
+            <ShoppingCart
+              cart={cart}
+              setCart={setCart}
+              amountInCart={amountInCart}
+              setAmountInCart={setAmountInCart}
+              totalPrice={totalPrice}
+              setTotalPrice={setTotalPrice}
+              ScrollToTop={ScrollToTop}
+            />
+          }
+        />
+      </Routes>
+      <Footer />
+    </HashRouter>
   );
 };
 
