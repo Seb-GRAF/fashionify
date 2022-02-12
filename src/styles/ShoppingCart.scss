@@ -1,6 +1,6 @@
 .shopping-cart {
   height: 100%;
-  max-width: 100%;
+  max-width: 30rem;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -52,7 +52,7 @@
   ul {
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    align-items: center;
     // justify-content: center;
     width: 100%;
     list-style: none;
@@ -62,9 +62,9 @@
     li {
       box-shadow: #0000002f 0 5px 5px;
       box-sizing: border-box;
-      min-width: 30rem;
       padding: 1rem 2rem;
       display: flex;
+      width: 100%;
       min-height: 8rem;
       align-items: center;
       justify-content: space-between;
@@ -129,12 +129,15 @@
   }
   .total-price,
   .payment-method {
+    box-sizing: border-box;
     background-color: #f7f7f7;
     min-height: 10rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     padding: 2rem;
     box-shadow: #0000002f 0 5px 5px;
 
@@ -181,7 +184,6 @@
     align-items: flex-start;
     min-height: auto;
     img {
-      width: 100%;
       height: 2rem;
     }
   }
