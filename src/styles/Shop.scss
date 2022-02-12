@@ -52,6 +52,7 @@
         transition: 200ms;
         cursor: pointer;
         background: none;
+        color: bla;
         border: none;
         font-size: 1rem;
         &:hover {
@@ -136,6 +137,11 @@
         input {
           width: 100%;
           margin: 0 1rem;
+        }
+        .button {
+          width: 100%;
+          justify-content: space-evenly;
+          gap: 0;
         }
         button {
           font-size: 0.9rem;
