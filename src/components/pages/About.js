@@ -130,10 +130,9 @@ const Section2 = () => {
     </div>
   );
 };
-const About = ({ ScrollToTop }) => {
+const About = () => {
   return (
     <div className="about">
-      <ScrollToTop />
       <Section1 />
       <Section2 />
     </div>

@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import ShoppingCart from "./pages/ShoppingCart";
+import ErrorPage from "./pages/ErrorPage";
 import products from "../components/products/products";
 import "../styles/App.scss";
 import { Route, Routes, HashRouter, useLocation } from "react-router-dom";
@@ -54,10 +55,11 @@ const App = () => {
 
   return (
     <HashRouter basename="/">
+      <ScrollToTop />
       <Header amountInCart={amountInCart} />
       {/* <ScrollToTop /> */}
       <Routes>
-        <Route path="/" element={<Home ScrollToTop={ScrollToTop} />} />
+        <Route path="/" element={<Home />} />
         <Route
           path="/shop"
           element={
@@ -68,23 +70,16 @@ const App = () => {
               setGender={setGender}
               setCategory={setCategory}
               setSearchValue={setSearchValue}
-              ScrollToTop={ScrollToTop}
             />
           }
         />
-        <Route path="/about" element={<About ScrollToTop={ScrollToTop} />} />
+        <Route path="/about" element={<About />} />
         {products.map((e) => {
           return (
             <Route
               key={uniqid()}
               path={`/shop/${e.name.replace(/\s/g, "-")}`}
-              element={
-                <Product
-                  e={e}
-                  handleAddToCart={handleAddToCart}
-                  ScrollToTop={ScrollToTop}
-                />
-              }
+              element={<Product e={e} handleAddToCart={handleAddToCart} />}
             />
           );
         })}
@@ -98,10 +93,10 @@ const App = () => {
               setAmountInCart={setAmountInCart}
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
-              ScrollToTop={ScrollToTop}
             />
           }
         />
+        <Route path="/404" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </HashRouter>

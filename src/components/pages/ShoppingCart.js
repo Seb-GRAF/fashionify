@@ -11,7 +11,6 @@ const ShoppingCart = ({
   amountInCart,
   setAmountInCart,
   totalPrice,
-  ScrollToTop,
 }) => {
   const handleIncreaseQuantity = (e) => {
     e.quantity += 1;
@@ -33,7 +32,6 @@ const ShoppingCart = ({
 
   return (
     <div className="shopping-cart">
-      <ScrollToTop />
       {amountInCart < 1 && (
         <div className="empty-cart">
           <p>Your cart is empty</p>
@@ -51,7 +49,7 @@ const ShoppingCart = ({
                 <Link to={`/shop/${element.product.name.replace(/\s/g, "-")}`}>
                   <img src={element.product.image} alt="product-image" />
                 </Link>
-                <div className="decription">
+                <div className="description">
                   <Link
                     to={`/shop/${element.product.name.replace(/\s/g, "-")}`}
                   >
@@ -95,7 +93,7 @@ const ShoppingCart = ({
               <p>Total (VAT incl.)</p>
               <div>CHF {totalPrice.toFixed(2)}</div>
             </div>
-            <a>ORDER</a>
+            <Link to="/404">ORDER</Link>
           </div>
         </ul>
       )}

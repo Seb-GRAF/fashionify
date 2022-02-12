@@ -1,13 +1,16 @@
 .shopping-cart {
   height: 100%;
+  max-width: 100%;
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: flex-start;
   margin: 0;
   gap: 2rem;
-  padding: 3rem 1rem;
+  box-sizing: border-box;
+  padding: 3rem 0rem;
   .empty-cart {
+    box-sizing: border-box;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -56,18 +59,22 @@
     gap: 1rem;
     margin: 0;
     li {
+      box-sizing: border-box;
+      min-width: 30rem;
       padding: 1rem 2rem;
       display: flex;
       min-height: 8rem;
       align-items: center;
+      justify-content: space-between;
       gap: 1rem;
       background-color: #f7f7f7;
       font-weight: 200;
       gap: 2rem;
-      .decription {
+      .description {
         display: flex;
         gap: 0.3rem;
         flex-direction: column;
+        flex: 1;
       }
       img {
         height: 5rem;
@@ -84,6 +91,7 @@
         border: black solid 1px;
         height: 2rem;
         width: 5rem;
+        box-sizing: border-box;
         button {
           background: none;
           border: none;
@@ -164,5 +172,16 @@
 @media only screen and (max-width: 850px) {
   .shopping-cart {
     padding: 1rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .shopping-cart {
+    padding: 1rem;
+    ul {
+      li {
+        gap: 1rem;
+        min-width: 0;
+      }
+    }
   }
 }

@@ -52,7 +52,7 @@
         transition: 200ms;
         cursor: pointer;
         background: none;
-        color: bla;
+        color: black;
         border: none;
         font-size: 1rem;
         &:hover {
@@ -72,6 +72,7 @@
         border: solid black 1px;
         transition: 200ms;
         padding: 0 0.2rem;
+        margin: 0 1rem;
         &:focus {
           background: #ffdcd357;
           box-shadow: #00000036 0 0 5px;
@@ -136,7 +137,6 @@
         justify-content: space-evenly;
         input {
           width: 100%;
-          margin: 0 1rem;
         }
         .button {
           width: 100%;

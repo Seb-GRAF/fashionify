@@ -236,10 +236,9 @@ const Section4 = () => {
     </motion.div>
   );
 };
-const Home = ({ ScrollToTop }) => {
+const Home = () => {
   return (
     <div className="home">
-      <ScrollToTop />
       <Section1 />
       <Section2 />
       <Section3 />

@@ -6,6 +6,7 @@ html {
   padding: 0;
   width: 100vw;
   min-height: 100vh;
+  background: white;
 }
 body {
   overflow-x: hidden;
@@ -18,6 +19,7 @@ body {
 }
 #root {
   max-width: 100%;
+  height: 95vh;
   position: relative;
   padding-top: 61px;
   display: flex;

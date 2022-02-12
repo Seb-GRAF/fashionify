@@ -87,7 +87,6 @@ const Shop = ({
   setCategory,
   searchValue,
   setSearchValue,
-  ScrollToTop,
 }) => {
   const handleSelectCategory = (selection) => {
     document.querySelector(".search").value = "";
@@ -129,7 +128,6 @@ const Shop = ({
 
   return (
     <div className="shop">
-      <ScrollToTop />
       <Categories
         gender={gender}
         category={category}
