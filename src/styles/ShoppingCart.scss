@@ -19,6 +19,7 @@
     background-color: #f7f7f7;
     padding: 5rem;
     gap: 1rem;
+    box-shadow: #0000002f 0 5px 5px;
     p {
       margin: 0;
       font-size: 1.5rem;
@@ -59,6 +60,7 @@
     gap: 1rem;
     margin: 0;
     li {
+      box-shadow: #0000002f 0 5px 5px;
       box-sizing: border-box;
       min-width: 30rem;
       padding: 1rem 2rem;
@@ -85,7 +87,7 @@
       }
       .add-and-remove {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         color: black;
         border: black solid 1px;
@@ -93,9 +95,12 @@
         width: 5rem;
         box-sizing: border-box;
         button {
+          width: 30%;
+          margin: 0;
+          padding: 0;
           background: none;
           border: none;
-          //   font-weight: 900;
+          color: black;
           font-size: 1rem;
           &:hover {
             color: #ff613a;
@@ -122,7 +127,8 @@
       }
     }
   }
-  .total-price {
+  .total-price,
+  .payment-method {
     background-color: #f7f7f7;
     min-height: 10rem;
     display: flex;
@@ -130,6 +136,8 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    box-shadow: #0000002f 0 5px 5px;
+
     p,
     h3 {
       margin: 0;
@@ -166,6 +174,15 @@
       }
 
       width: 100%;
+    }
+  }
+  .payment-method {
+    justify-items: flex-start;
+    align-items: flex-start;
+    min-height: auto;
+    img {
+      width: 100%;
+      height: 2rem;
     }
   }
 }

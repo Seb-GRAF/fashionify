@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import uniqid from "uniqid";
 import "../../styles/ShoppingCart.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
 const ShoppingCart = ({
   cart,
@@ -62,7 +62,7 @@ const ShoppingCart = ({
                       handleDelete(element);
                     }}
                   >
-                    <FontAwesomeIcon icon={faTrash} />
+                    <FontAwesomeIcon icon={faTrashCan} />
                     <p>Remove</p>
                   </div>
                 </div>
@@ -94,6 +94,15 @@ const ShoppingCart = ({
               <div>CHF {totalPrice.toFixed(2)}</div>
             </div>
             <Link to="/404">ORDER</Link>
+          </div>
+          <div className="payment-method">
+            <h3>We accept</h3>
+            <div className="icons">
+              <img
+                src={require("../../assets/credit-card-logos.png")}
+                alt="credit cards"
+              />
+            </div>
           </div>
         </ul>
       )}
