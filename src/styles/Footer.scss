@@ -1,12 +1,13 @@
 footer {
   box-sizing: border-box;
-  // min-height: 20rem;
   width: 100%;
   background: #f7f7f7;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  // flex: 1;
+  grid-template-columns: repeat(4, 1fr);
   cursor: default;
+  .cta {
+    grid-column: 1 / 3;
+  }
   div {
     padding: 2rem;
     .form {
@@ -15,14 +16,12 @@ footer {
       display: flex;
       input {
         border: #aaaaaa solid 1px;
-        border-radius: 5px 0 0 5px;
         outline: none;
         &::placeholder {
           padding: 0.4rem;
         }
       }
       button {
-        border-radius: 0 5px 5px 0;
         font-size: 1rem;
         font-weight: 600;
         padding: 0.2rem 1rem;

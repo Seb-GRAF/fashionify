@@ -64,19 +64,18 @@
         text-shadow: black 2px 2px 1px, black 0 0 10px;
       }
       .shop-button {
-        width: fit-content;
-        color: black;
-        position: relative;
-        background: rgb(255, 255, 255);
-        box-shadow: #ff623a 0px 0px 0px 0px;
-        // outline: #ff623a solid 4px;
-        // outline-offset: 4px;
-        border-radius: 5px;
+        margin-top: 1rem;
         font-size: 1.5rem;
-        padding: 0.6em 1em;
-        transition: 200ms;
+        text-decoration: none;
+        background: white;
+        color: #000000;
+        box-shadow: #ff613a 3px 3px 0px 1px;
+        width: 12rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        transition: 400ms;
         &:hover {
-          box-shadow: #a83232 0px 0px 0px 4px, #ff623a 0px 0px 0px 8px;
+          background: #ff967c;
         }
       }
     }
